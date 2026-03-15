@@ -1,0 +1,23 @@
+{
+    "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(git commit *)",
+      "Bash(git * main)",
+      "Bash(*python*google*)",
+      "Bash(* --version)",
+      "Bash(* --help *)"
+    ],
+    "deny": [
+      "Bash(git push *)"
+    ]
+   },    
+    "env": {
+        "ANTHROPIC_AUTH_TOKEN": "sk-sp-95126cb7e3644125b1f80af47987fcdd",
+        "ANTHROPIC_BASE_URL": "https://coding.dashscope.aliyuncs.com/apps/anthropic",
+        "ANTHROPIC_MODEL": "glm-5",
+        "ANTHROPIC_DEFAULT_HAIKU_MODEL": "glm-5",
+        "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-5",
+        "ANTHROPIC_DEFAULT_OPUS_MODEL": "glm-5"
+    }
+}
