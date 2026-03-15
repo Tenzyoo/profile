@@ -1,0 +1,11 @@
+{
+  "name": "张三",
+  "nameEn": "San Zhang",
+  "title": "AI Engineer / Researcher",
+  "avatar": "/avatar.jpg",
+  "email": "zhangsan@example.com",
+  "github": "https://github.com/zhangsan",
+  "linkedin": "https://linkedin.com/in/zhangsan",
+  "location": "北京, 中国",
+  "summary": "专注于人工智能和机器学习领域的研究与开发，具有丰富的深度学习项目经验。"
+}
