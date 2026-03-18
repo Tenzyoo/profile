@@ -9,7 +9,7 @@
       "Bash(* --help *)"
     ],
     "deny": [
-      "Bash(git push *)"
+      
     ]
    },    
     "env": {
