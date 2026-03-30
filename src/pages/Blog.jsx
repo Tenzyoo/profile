@@ -3,8 +3,12 @@ import blog from '../data/blog.json'
 import styles from './Blog.module.css'
 
 function Blog() {
-  // 按日期从近到远排序
+  // 置顶帖子优先，然后按日期从近到远排序
   const sortedPosts = [...blog.posts].sort((a, b) => {
+    // 置顶的排在前面
+    if (a.pinned && !b.pinned) return -1
+    if (!a.pinned && b.pinned) return 1
+    // 其他按日期排序
     const dateA = new Date(a.date.replace(/\./g, '-'))
     const dateB = new Date(b.date.replace(/\./g, '-'))
     return dateB - dateA
@@ -23,6 +27,7 @@ function Blog() {
             to={`/blog/${post.id}`}
             className={styles.postItem}
           >
+            {post.pinned && <span className={styles.pinnedTag}>置顶</span>}
             <div className={styles.postHeader}>
               <h2 className={styles.postTitle}>{post.title}</h2>
               <span className={styles.postDate}>{post.date}</span>

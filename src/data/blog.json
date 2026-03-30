@@ -215,6 +215,7 @@
       "date": "2026.03.16",
       "summary": "分享使用Claude Code开发个人网站的实践经验，包括协作planning、数据分离设计、Figma MCP集成等技巧。",
       "tags": ["Claude Code", "Vibe Coding", "AI编程", "个人网站"],
+      "pinned": true,
       "link": "",
       "building": false,
       "sections": [
