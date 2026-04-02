@@ -159,6 +159,11 @@
           "type": "image",
           "src": "/images/research/paper-2/pipeline.png",
           "caption": "workflow说明"
+        },
+        {
+          "type": "image",
+          "src": "/images/research/paper-2/case.png",
+          "caption": "Case：LLM结合自由画布，支持了多层级概念构建与迭代"
         }
       ]
     },
