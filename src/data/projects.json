@@ -6,7 +6,7 @@
       "image": "/images/projects/project-1/teaser.png",
       "summary": "EyeSay 是一款专为中风、帕金森及渐冻症等重度失能群体设计的人格化辅助沟通工具。该方案利用Apple的ARKit技术实现低成本的眼动追踪交互，有效降低了患者的使用门槛。通过集成GPT-4大语言模型，系统能结合话题偏好与社交亲密度两个核心维度，预测并生成的个性化回复。",
       "team": "项目成员：Yuyang Fang，Zhuyu Teng，Zhaoqu Jiang",
-      "tech": ["Python", "LangChain", "Milvus", "FastAPI", "React", "GPT-4"],
+      "tech": ["Swift", "GPT", "LLM"],
       "link": "",
       "period": "2023.03 - 2023.09",
       "sections": [
@@ -155,6 +155,217 @@
           "type": "image",
           "src": "/images/projects/project-4/bg.png",
           "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "project-6",
+      "name": "《尾巴》Arduino办公场景时间感知设计",
+      "image": "/images/projects/project-6/teaser.png",
+      "summary": "本文详细基于arduino的时钟 产品的软硬件设计。通过灯带可视化编程、硬件控制、天气API联网、人体感知，实现办公场景人们对时间的模糊感受的可视化交互。",
+      "team": "Zhuyu Teng",
+      "tech": ["Arduino", "人体存在传感器", "ESP32天气API"],
+      "link": "",
+      "period": "2023.04",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "演示视频"
+        },
+        {
+          "type": "bilibili",
+          "bvid": "BV1zM4y1U7za",
+          "caption": "Arduino时钟设计效果演示"
+        },
+        {
+          "type": "heading",
+          "content": "项目背景"
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/project-6/teaser.png",
+          "caption": ""
+        },
+        {
+          "type": "text",
+          "content": "　　\"感觉才没一会，怎么天都黑了？\",\"想方案太难熬了，定了40分钟的番茄钟，动不动拿出手机查看发现才过了一会儿\",\"今天总是被打断，也不知道真正坐下来好好专注的时间有多少\"······万事万物有迹可循，时间的感知亦有痕迹可查。\n 　　在生活中，我们无时无刻不在感知着时间，但是我们在做不同的事情时，尤其是并行事件，对时间的感知是不均匀的，或者说是\"非线性\"的，主要体现在以下三个方面：1）对当前时刻距离计时结束的长短变化感知；2）在室内人在办公场景专注于当前事物的时间占比感知；3）人对于自然空间的时间变化感知。\n 　　因此我们认为缺少一个对应的感知可视化机制，将办公场景下的并行事件进行对齐、比较、感知，在提高效率的同时，也赋予办公场景时钟设计的可玩性。\n 　　如何抓住时间悄悄溜走时漏出的马脚？对这个问题的思考成为了我们方案与功能的切入点。《尾巴》，是一款时间感知设计，产品采用弱交互的方式聚焦于办公场景的时间感知问题，将人们对时间的模糊感受用合理的可视化方式去呈现。 "
+        },
+        {
+          "type": "heading",
+          "content": "功能目标"
+        },
+        {
+          "type":"text",
+          "content":"　　基于三种时间感知的设计切入点，《尾巴》有三个对应的功能设计和时间指示的基本功能设计：\n1）时间的拖尾（尾巴）--计时时长与当前时间的可视化结合设计:指腹从分针位置开始沿着顺时针触摸，拉出一条弧线，即时间的尾巴；尾巴的长短代表计时的长短，尾巴颜色从头到尾渐变减淡，随着分针不断向前走进，尾巴变短，颜色减淡，相当于时间慢慢收回露出的尾巴。拖出尾巴的幽默设计，让办公场景不那么枯燥，颜色渐变简单提醒时间所剩无几的弱交互方式也契合不想被过度打扰的诉求。\n2）脚印--人在办公时长的占比时间可视化设计：通过传感器检测人体存在，对应时间段如果人在时钟前办公，则将记录人体存在时长信息，对应时钟表盘上的灯亮起。12小时内人的存在与离开会让亮起与熄灭的灯组合成一串\"脚印\"，可视化地展示今日办公时长占比。\n3）天气--关于自然空间变化的感知设计：调用arduino关于天气的API接口，将晴、阴、雨、雪等几种不同的天气对应不同颜色，通过灯光编程，反应到指针的灯光上。\n4）指针--时间指示的基本功能设计：通过对灯带的灯光编程，点亮两个灯珠，从圆环形的时钟边框向内射出两个光源，作为时针和分针的指示，两者用颜色的深浅加以区别，深色为时针，浅色为分针。"
+        },
+        {
+          "type": "heading",
+          "content": "技术路径"
+        },
+        {
+          "type": "subheading",
+          "content": "所需材料"
+        },
+        {
+          "type": "text",
+          "content": "1）控制部分\n旋转编码器、ESP32s主板、WS2812B彩色LED灯带、LD1155H-24G人体存在传感器、6V电池组、继电器、杜邦线若干\n\n2）结构部分\n3D打印结构件（自制）、亚克力透光板\n\n3）工具部分\n硬件：3D打印机、激光切割机\n软件：Arduino、视频(Pr、Ps)、模型(Rhino、Blender、Prusaslicer)"
+        },
+        {
+          "type": "subheading",
+          "content": "输入模块-旋转编码器"
+        },
+        {
+          "type": "text",
+          "content": "　　旋转编码器是一种位置传感器，可将旋钮的角位置（旋转）转换为用于确定旋钮旋转方向的输出信号。与电位计相比，它可以完全旋转而无止档。增量型旋转编码器可以报告旋钮位置的变化，而不需要了解旋钮的确切位置。\n　　通过读取编码器的两个输出引脚CLK和DT的状态来确定脉冲周期和旋转方向。由于采用读取CLK引脚从低电平转变为高电平时触发，在实际测试过程中发现旋转编码器的抖动现象较严重，加入防抖动设计可以缓解此现象。另外，调整旋转的相关参数也可以获得更好的效果。"
+        },
+        {
+          "type": "images",
+          "items": [
+            {
+              "src": "/images/projects/project-6/RotaryEncoder_1.png",
+              "caption": ""
+            },
+            {
+              "src": "/images/projects/project-6/RotaryEncoder_2.jpg",
+              "caption": ""
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "language": "Arduino",
+          "content": "// 定义引脚\n#define CLK 2\n#define DT  3\n\nint counter = 0;  // 旋转次数\nunsigned long currentTime = 0;\nunsigned long lastTime = 0;\n\nvoid setup() {\n  pinMode(CLK, INPUT);\n  pinMode(DT, INPUT);\n\n  // 使用中断\n  attachInterrupt(0, UpdateCounter, RISING); // 对应引脚2\n\n  Serial.begin(9600);\n}\n\nvoid loop() {\n\n}\n\nvoid UpdateCounter(){\n  currentTime = millis();\n  if(currentTime - lastTime > 10){  // 防抖动\n    int CLKState = digitalRead(CLK);\n    // 当CLK更改状态时：\n    // 如果DT != CLK，顺时针旋转\n    // 如果DT == CLK, 逆时针旋转\n    if(digitalRead(DT) != CLKState){\n      counter ++;\n    }\n    else{\n      counter --;\n    }\n    lastTime = currentTime;\n\n    Serial.print(\"counter: \");\n    Serial.println(counter);\n  }\n}"
+        },
+        {
+          "type": "subheading",
+          "content": "输入模块-LD1155H-24G人体存在传感器"
+        },
+        {
+          "type": "text",
+          "content": "　　LD1155H-24G人体存在传感器是一款高灵敏度24GHz毫米波人体存在检测雷达模块，主要通过检测积累人体呼吸等微小幅度等运动，来判断人体的存在，因此对人体存在的检测相比传统移动检测雷达来说，准确率更高，不易漏报。\n　　由于LD1155H-24G人体存在传感器使用电磁波进行检测，不需要在硬件表面打孔，维持了产品的美观程度。"
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/project-6/LD1155H.png",
+          "caption": "",
+          "halfWidth": true
+        },
+        {
+          "type": "code",
+          "language": "Arduino",
+          "content": "// 定义传感器引脚\nint sensorPin = 2;\n// 定义LED引脚\nint ledPin = 13;\n// 定义变量来保存传感器的状态\nint sensorState = 0;\n\nvoid setup() {\n    // 将LED引脚设置为输出模式\n    pinMode(ledPin, OUTPUT);\n    // 将传感器引脚设置为输入模式\n    pinMode(sensorPin, INPUT);\n    // 开启串口通信\n    Serial.begin(9600);\n}\n\nvoid loop() {\n    // 读取传感器状态\n    sensorState = digitalRead(sensorPin);\n\n    if (sensorState == HIGH) {\n        // 当有人存在时，点亮LED并打印信息\n        digitalWrite(ledPin, HIGH);\n        Serial.println(\"Detected human presence\");\n    } else {\n        // 当无人存在时，熄灭LED\n        digitalWrite(ledPin, LOW);\n    }\n\n    // 延迟一段时间后重新执行循环\n    delay(1000);\n}"
+        },
+        {
+          "type": "subheading",
+          "content": "输入模块-ESP32联网获取天气API"
+        },
+        {
+          "type": "code",
+          "language": "Arduino",
+          "content": "#include <WiFi.h>\n#include <HTTPClient.h>\n\nconst char* ssid = \"your_SSID\";\nconst char* password = \"your_PASSWORD\";\n\nvoid setup() {\n  Serial.begin(115200);\n  delay(1000);\n\n  WiFi.begin(ssid, password);\n\n  while (WiFi.status() != WL_CONNECTED) {\n    delay(1000);\n    Serial.println(\"Connecting to WiFi...\");\n  }\n\n  Serial.println(\"WiFi connected\");\n}\n\nvoid loop() {\n  if (WiFi.status() == WL_CONNECTED) {\n    HTTPClient http;\n    http.begin(\"http://api.openweathermap.org/data/2.5/weather?q=Shenzhen&appid=your_API_key\");\n\n    int httpCode = http.GET();\n\n    if (httpCode > 0) {\n      String payload = http.getString();\n      Serial.println(payload);\n    }\n\n    http.end();\n  }\n\n  delay(60000); // 每隔一分钟获取一次天气 API\n}"
+        },
+        {
+          "type": "text",
+          "content": "　　在上述代码中，我们首先定义了 Wi-Fi 的 SSID 和密码，并在 setup 函数中连接 Wi-Fi。然后，在 loop 函数中，我们使用 HTTPClient 库创建了一个 HTTP GET 请求，请求一个天气 API 并获取其响应。在获取响应后，我们将结果显示在串口终端上，并在一分钟后再次获取天气 API。\n　　注意：\n　　为了成功连接 Wi-Fi，需要在 Arduino IDE 中安装 ESP32 开发板库，选择对应的模块型号，并正确配置 Wi-Fi 的 SSID 和密码。此外，还需要在 OpenWeatherMap 上注册账号，并获取一个 API key，用于访问天气 API。在实际使用中，可以根据需要修改天气 API 的请求地址和参数，以及定时器的时间间隔等参数。"
+        },
+        {
+          "type": "subheading",
+          "content": "输出模块-LED灯带"
+        },
+        {
+          "type": "text",
+          "content": "　　使用WS2812B灯带，分别用不同的颜色表示时针和分钟，在连接电源后会自动尝试联网获取当前时间并显示。使用FastLED库控制每个灯珠的颜色，通过EVERY_N_SECONDS函数每秒进行一次计时，并更新灯珠颜色。"
+        },
+        {
+          "type": "code",
+          "language": "Arduino",
+          "content": "#include <FastLED.h>\n\n#define LED_PIN 7 // LED引脚\n#define NUM_LEDS 60 // 灯珠数量\n\nCRGB leds[NUM_LEDS];\nint hour = 0;\nint min = 0;\nint sec = 0;\n\nvoid setup() {\n  FastLED.addLeds<WS2812, LED_PIN, GRB>(leds, NUM_LEDS); // 初始化灯带\n}\n\nvoid loop() {\n  EVERY_N_SECONDS(1){ // 每隔1秒定时执行\n    Timing();\n    UpdateLEDS();\n  }\n}\n\nvoid Timing(){\n  sec ++;\n  if(sec >= 60){\n    sec -= 60;\n    min ++;\n    if(min >= 60){\n      min -= 60;\n      hour ++;\n    }\n    if(hour >= 12){\n      hour -= 12;\n    }\n  }\n}\n\nvoid UpdateLEDS(){\n  leds[sec] = CRGB(0, 0, 255);\n  leds[min] = CRGB(0, 255, 0);\n  leds[(hour + min / 60) * 5] = CRGB(255, 0, 0);\n}"
+        },
+        {
+          "type": "text",
+          "content": "　　通过读取旋转编码器旋转的圈数，依次点亮以分针为起始的灯珠，并随分针的前进再依次熄灭，实现倒计时效果。"
+        },
+        {
+          "type": "heading",
+          "content": "结构与外观"
+        },
+        {
+          "type": "text",
+          "content": "　　注意：\n　　为了实现旋转输入，通过内部的齿轮传动设计将旋转信号输入到底部的旋转编码器，灯光带放置在齿轮内圈，并用一圈透光板封装，其余元器件则整合安装在底部，分离式安装防止相互干扰。"
+        },
+        {
+          "type": "images",
+          "items": [
+            {
+              "src": "/images/projects/project-6/structure.png",
+              "caption": ""
+            },
+            {
+              "src": "/images/projects/project-6/outlook.png",
+              "caption": ""
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "content": "硬件连接"
+        },
+        {
+          "type": "image",
+          "src": "/images/projects/project-6/connect.png",
+          "caption": ""
+        },
+        {
+          "type": "text",
+          "content": "　　旋转编码器的CLK和DT引脚分别接33和34端口，LD1155H-24G人体存在传感器的URX和UTX分别接TXD和RXD接口，WS2812B灯带的输入引脚接4号端口，其余的正极和GND接口各自相连即可。需要注意不要将灯带的输入口与输出口搞混。另外，由于电池组的电压不够，需要额外配备电源转接头为灯带供电。"
+        },
+        {
+          "type": "heading",
+          "content": "知识拓展"
+        },
+        {
+          "type": "subheading",
+          "content": "ESP32模块"
+        },
+        {
+          "type": "text",
+          "content": "　　ESP32模块是ESP8266的升级版本。除了Wi-Fi模块，该模块还包含蓝牙4.0模块。双核CPU工作频率为80至240 MHz，包含两个Wi-Fi和蓝牙模块以及各种输入和输出引脚，是物联网项目的理想选择。\n　　我们为了获取实时天气数据采用了这款开发板，一开始是将WiFi和主程序分别在esp32板和Uno板上实现的，后面发现esp32同样可以实现主程序的控制，故将所有程序移植整合到该板上，大大节省了空间占用，最终能够封装在产品内部。\n　　注意：\n　　测试时要确保正确设置上传波特率，通常，此波特率应为115200。\n　　wifi连接需要用户名与密码，所以公共网络如校园网是无法连接成功的，我们推荐使用家庭、个人网络。"
+        }
+      ]
+    },
+    {
+      "id": "project-5",
+      "name": "语言模型应用之海龟汤游戏",
+      "image": "/images/projects/project-5/cover.png",
+      "summary": "基于语言模型微调和agent配合，实现一个大语言模型的互动海龟汤推理游戏。玩家通过提问来揭示谜题背后的真相，LLM作为主持人回答玩家的疑问，引导推理过程。",
+      "team": "Zhuyu Teng",
+      "tech": ["LLM", "React", "推理游戏", "互动叙事"],
+      "link": "/games",
+      "period": "2026.04",
+      "sections": [
+        {
+          "type": "heading",
+          "content": "游戏介绍"
+        },
+        {
+          "type": "text",
+          "content": "海龟汤是一种情境推理游戏。玩家会得到一个看似不合理的故事片段（称为「汤面」），需要通过提问来推理出背后的完整故事（称为「汤底」）。"
+        },
+        {
+          "type": "heading",
+          "content": "玩法"
+        },
+        {
+          "type": "text",
+          "content": "玩家可以提出任何问题，主持人（LLM）只会回答「是」「否」「不重要」。通过不断提问，玩家逐渐拼凑出完整的故事真相。"
+        },
+        {
+          "type": "heading",
+          "content": "开始游戏"
+        },
+        {
+          "type": "games",
+          "content": "点击下方按钮开始游戏体验"
         }
       ]
     }

@@ -20,3 +20,6 @@ npm-debug.log*
 
 .claude/
 */settings.json
+
+# Playwright MCP cache
+.playwright-mcp/
