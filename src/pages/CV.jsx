@@ -6,6 +6,15 @@ import experiences from '../data/experiences.json'
 import skills from '../data/skills.json'
 import styles from './CV.module.css'
 
+// CV页面专用的项目名称覆盖（不影响其他页面）
+const cvTitleOverrides = {
+  'exp-1': '共享第一人称实时视野的智能对话助手',
+  'exp-2': '小数-适老化虚拟人对话音箱',
+  'exp-6': 'EyeSay-基于大模型的社交辅助沟通工具',
+  'exp-3': '无限画布-支持人AI共创的设计构思工具',
+  'exp-4': '基于实时动态图谱推理的人机协同产品概念设计系统',
+}
+
 function CV() {
   return (
     <div className={styles.cv}>
@@ -39,8 +48,8 @@ function CV() {
         </div>
       </section>
 
-      {/* 实习经历 */}
-      {internships.internships && internships.internships.length > 0 && (
+      {/* 实习经历（暂时隐藏） */}
+      {/* {internships.internships && internships.internships.length > 0 && (
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>实习经历</h2>
           <div className={styles.list}>
@@ -67,7 +76,7 @@ function CV() {
             ))}
           </div>
         </section>
-      )}
+      )} */}
 
       {/* AI项目经历 */}
       {experiences.experiences && experiences.experiences.length > 0 && (
@@ -75,11 +84,12 @@ function CV() {
           <h2 className={styles.sectionTitle}>AI项目经历</h2>
           <div className={styles.awardList}>
             {experiences.experiences.map((exp) => {
+              const displayTitle = cvTitleOverrides[exp.id] || exp.title
               // 有论文ID
               if (exp.paperId) {
                 return (
                   <Link key={exp.id} to={`/research/${exp.paperId}`} className={styles.awardItemLink}>
-                    <span className={styles.awardTitle}>{exp.title}</span>
+                    <span className={styles.awardTitle}>{displayTitle}</span>
                     {exp.role && <span className={styles.awardLevel}>{exp.role}</span>}
                     <span className={styles.awardDate}>{exp.date}</span>
                   </Link>
@@ -89,7 +99,7 @@ function CV() {
               if (exp.projectId) {
                 return (
                   <Link key={exp.id} to={`/projects/${exp.projectId}`} className={styles.awardItemLink}>
-                    <span className={styles.awardTitle}>{exp.title}</span>
+                    <span className={styles.awardTitle}>{displayTitle}</span>
                     {exp.role && <span className={styles.awardLevel}>{exp.role}</span>}
                     <span className={styles.awardDate}>{exp.date}</span>
                   </Link>
@@ -98,7 +108,7 @@ function CV() {
               // 无链接
               return (
                 <div key={exp.id} className={styles.awardItem}>
-                  <span className={styles.awardTitle}>{exp.title}</span>
+                  <span className={styles.awardTitle}>{displayTitle}</span>
                   {exp.role && <span className={styles.awardLevel}>{exp.role}</span>}
                   <span className={styles.awardDate}>{exp.date}</span>
                 </div>

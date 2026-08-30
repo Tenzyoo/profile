@@ -66,6 +66,14 @@
               "caption": ""
             }
           ]
+        },
+        {
+          "type": "heading",
+          "content": "项目成果"
+        },
+        {
+          "type": "text",
+          "content": "🏆 中国高校计算机大赛-移动应用创新赛：社会责任创新奖（唯一单项）、全国二等奖\n📄 论文发表：\n· SocializeChat: a GPT-based AAC Tool for Social Communication Through Eye Gazing — In Adjunct Proceedings of the ACM International Joint Conference on Pervasive and Ubiquitous Computing（Ubicomp）· CCFA · 2023\n· SocializeChat: A GPT-Based AAC Tool Grounded in Personal Memories to Support Social Communication — IEEE International Conference on Systems, Man, and Cybernetics (IEEE SMC) · CCFB · 2025"
         }
       ]
     },
@@ -111,6 +119,14 @@
           "type": "image",
           "src": "/images/projects/project-2/demo_3.jpg",
           "caption": ""
+        },
+        {
+          "type": "heading",
+          "content": "项目成果"
+        },
+        {
+          "type": "text",
+          "content": "📰 产品获得《人民日报》主版头条报道（2023.06.18）\nhttps://paper.people.com.cn/rmrb/html/2023-06/18/nw.D110000renmrb_20230618_1-02.htm\n🏆 中国国际\"互联网+\"大学生创新创业大赛：浙江省研究生初创组·银奖"
         }
       ]
     },
@@ -125,6 +141,15 @@
       "period": "2023.09 - 2024.12",
       "sections": [
         {
+          "type": "heading",
+          "content": "项目介绍"
+        },
+        {
+          "type": "video",
+          "src": "https://cdn.di-award.org/data/work/video/2024/06/23/07_07_42_c9yc7zudgpsr5b8y.mp4",
+          "caption": "系统介绍视频"
+        },
+        {
           "type": "image",
           "src": "/images/projects/project-3/cover.png",
           "caption": ""
@@ -138,6 +163,14 @@
           "type": "image",
           "src": "/images/projects/project-3/tech_2.jpg",
           "caption": ""
+        },
+        {
+          "type": "heading",
+          "content": "项目成果"
+        },
+        {
+          "type": "text",
+          "content": "🏆 中国研究生「美丽中国」创新设计大赛：工业产品设计赛道·全场总冠军、全国一等奖\n🏆 中国设计智造大奖（DIA）：佳作奖·设计新锐（Top 39）"
         }
       ]
     },

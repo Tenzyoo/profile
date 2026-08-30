@@ -168,6 +168,34 @@
       ]
     },
     {
+      "id": "paper-4",
+      "title": "Real-Time Dynamic Graph Construction and Reasoning to Support Human-AI Collaborative Product Conceptual Design",
+      "listSubtitle": "基于实时动态图谱推理的人机协同产品概念设计系统（审稿中）· JED 2026 (SCI Q2) · 学生二作",
+      "subtitle": "基于实时动态图谱推理的人机协同产品概念设计系统",
+      "authors": ["Pei Chen", "Wenzheng Song", "Zhuyu Teng", "Xilai Wang", "Hongbo Zhang", "Zihong Zhou", "*Lingyun Sun"],
+      "journal": "Journal of Engineering Design（JED）·SCI Q2",
+      "date": "2026",
+      "abstract": "本项目开发了一种实时动态图构建与推理方法，利用LLM实时提取设计概念并构建结构化逻辑链形成动态知识图谱，支持同步设计师的认知状态与设计概念的协同推理。",
+      "image": "/images/research/paper-4/cover.png",
+      "link": "https://www.tandfonline.com/doi/full/10.1080/09544828.2026.2680619",
+      "tags": ["人机联合推理", "动态图谱构建", "LLM","产品概念设计", "生成式人工智能"],
+      "sections": [
+        {
+          "type": "heading",
+          "content": "研究简介"
+        },
+        {
+          "type": "image",
+          "src": "/images/research/paper-4/teaser.png",
+          "caption": "系统框架"
+        },
+        {
+          "type": "text",
+          "content": "摘要：在产品概念设计过程中，设计师的构思具有高度的动态性和开放性 。尽管现有的生成式人工智能（AI）扩展了设计空间，但它难以与设计师的认知状态保持同步，并进行深层的协作推理。为了解决这一问题，本文提出了一种实时动态图构建与推理方法 。该方法采用“需求-功能-逻辑-物理”（RFLP）本体作为结构主干，利用大语言模型（LLMs）提取概念和关系，以构建结构化的逻辑链 。在图推理阶段，大语言模型根据图的拓扑结构进行路径回溯和节点扩展，从而提供推动设计创意协同演化的建议。我们在一个交互式白板原型中实现了这种实时可视化的动态图推理方法。一项涉及 24 名参与者的用户研究表明，与仅含聊天功能的 AI 基准相比，所提出的结构化方法显著提高了最终设计方案的工程质量，同时确保了人机协作体验的可解释性和可控性。"
+        }
+      ]
+    },
+    {
       "id": "paper-3",
       "title": "Perceive, Trigger, Present: Unlocking AI’s Situational Judgment Ability to Support 3D Design in Mixed Reality",
       "listSubtitle": "基于Mixed Reality的智能3D设计辅助系统（审稿中）· IJHCS 2026 (SCI Q1) · 论文一作",
@@ -201,34 +229,6 @@
           "type": "image",
           "src": "/images/research/paper-3/teaser.png",
           "caption": "场景展示"
-        }
-      ]
-    },
-    {
-      "id": "paper-4",
-      "title": "Real-Time Dynamic Graph Construction and Reasoning to Support Human-AI Collaborative Product Conceptual Design",
-      "listSubtitle": "基于实时动态图谱推理的人机协同产品概念设计系统（审稿中）· JED 2026 (SCI Q2) · 学生二作",
-      "subtitle": "基于实时动态图谱推理的人机协同产品概念设计系统",
-      "authors": ["Pei Chen", "Wenzheng Song", "Zhuyu Teng", "Xilai Wang", "Hongbo Zhang", "Zihong Zhou", "*Lingyun Sun"],
-      "journal": "Journal of Engineering Design（JED）·SCI Q2",
-      "date": "2026",
-      "abstract": "本项目开发了一种实时动态图构建与推理方法，利用LLM实时提取设计概念并构建结构化逻辑链形成动态知识图谱，支持同步设计师的认知状态与设计概念的协同推理。",
-      "image": "/images/research/paper-4/cover.png",
-      "link": "",
-      "tags": ["人机联合推理", "动态图谱构建", "LLM","产品概念设计", "生成式人工智能"],
-      "sections": [
-        {
-          "type": "heading",
-          "content": "研究简介"
-        },
-        {
-          "type": "image",
-          "src": "/images/research/paper-4/teaser.png",
-          "caption": "系统框架"
-        },
-        {
-          "type": "text",
-          "content": "摘要：在产品概念设计过程中，设计师的构思具有高度的动态性和开放性 。尽管现有的生成式人工智能（AI）扩展了设计空间，但它难以与设计师的认知状态保持同步，并进行深层的协作推理。为了解决这一问题，本文提出了一种实时动态图构建与推理方法 。该方法采用“需求-功能-逻辑-物理”（RFLP）本体作为结构主干，利用大语言模型（LLMs）提取概念和关系，以构建结构化的逻辑链 。在图推理阶段，大语言模型根据图的拓扑结构进行路径回溯和节点扩展，从而提供推动设计创意协同演化的建议。我们在一个交互式白板原型中实现了这种实时可视化的动态图推理方法。一项涉及 24 名参与者的用户研究表明，与仅含聊天功能的 AI 基准相比，所提出的结构化方法显著提高了最终设计方案的工程质量，同时确保了人机协作体验的可解释性和可控性。"
         }
       ]
     },
